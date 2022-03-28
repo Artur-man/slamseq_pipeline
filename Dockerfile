@@ -44,7 +44,7 @@ ENV PATH /opt/conda/envs/dolphinnext-slamseq-3.0/bin:/usr/local/bin/dolphin-tool
 RUN pip install "multiqc==1.7"
 
 # Hisat3n
-# RUN git clone https://github.com/DaehwanKimLab/hisat2.git hisat-3n
-# RUN cd hisat-3n
-# RUN git checkout -b hisat-3n origin/hisat-3n
-# RUN make
+RUN git clone https://github.com/DaehwanKimLab/hisat2.git hisat-3n
+RUN cd hisat-3n
+RUN git checkout -b hisat-3n origin/hisat-3n
+RUN make
