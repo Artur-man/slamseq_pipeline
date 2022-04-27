@@ -48,9 +48,10 @@ RUN git clone https://github.com/DaehwanKimLab/hisat2.git hisat-3n
 WORKDIR "/hisat-3n"
 RUN git checkout -b hisat-3n origin/hisat-3n
 RUN make
+WORKDIR "/"
 
 # Java 16.0.2 for SlamTools.jar
 wget https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz
 gzip -d openjdk-16.0.2_linux-x64_bin.tar.gz 
 tar xvf openjdk-16.0.2_linux-x64_bin.tar 
-export PATH="jdk-16.0.2/bin:$PATH"
+export PATH="/jdk-16.0.2/bin:$PATH"
