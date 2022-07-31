@@ -9,10 +9,10 @@ The SLAM-seq pipeline includes Quality Control, rRNA filtering using Bowtie2, Bo
   1. For Quality Control, we use FastQC to create qc outputs. There are optional read quality filtering (trimmomatic), read quality trimming (trimmomatic), adapter removal (cutadapt) processes available.
   2. [**Hisat3N**](http://daehwankimlab.github.io/hisat2/hisat-3n/) accounts for U>C substitutions, which is normally recognized as a mismatch when aligning reads to the genome, and does not penalize when detecting a U>C mismatch on the reads.
   3. A custom java code is used for generating converted and uncoverted reads where converted reads are of same sets of reads from unconverted reads with U>C substitutions. 
-  3. RSEM is used to align converted and unconverted reads to a reference transcripts and estimates gene and isoform expression levels. RSEM incorporates STAR as the main aligner. 
-  4. Alternatively, Kallisto used for quantifying abundances of transcripts based on pseudoalignments.
-  5. Genome-wide Bam analysis is done by RseQC, Picard.
-  6. Optionally you can create Integrative Genomics Viewer (IGV)  and Genome Browser Files (TDF and Bigwig, respectively)
+  4. RSEM is used to align converted and unconverted reads to a reference transcripts and estimates gene and isoform expression levels. RSEM incorporates STAR as the main aligner. 
+  5. Alternatively, Kallisto used for quantifying abundances of transcripts based on pseudoalignments.
+  6. Genome-wide Bam analysis is done by RseQC, Picard.
+  7. Optionally you can create Integrative Genomics Viewer (IGV)  and Genome Browser Files (TDF and Bigwig, respectively)
 
 ##### Pipeline Container:
   * Docker: dolphinnext/slamseq_pipeline:1.0
