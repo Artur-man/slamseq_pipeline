@@ -3,11 +3,7 @@
 **SLAM-seq** ([**Herzog et. al 2017**](https://www.nature.com/articles/nmeth.4435)) allows the measurement of gene expression dynamics in the context of total RNA by incorporating 4-thiouridine (4sU) in newly synthesized RNA molecules. 
 Those incorporated 4sU molecules are then converted to Cs giving single nucleotide resolution.
 
-The SLAM-seq pipeline includes Quality Control, rRNA filtering using Bowtie2, Bowtie and STAR prior to Hisat3N alignment for accounting U>C substitutions. 
-The converted and uncorverted reads are generated with a custom Java code, and then gene and isoform expression levels are estimated by RSEM or Kallisto. 
-
-U>C substitutions would normally be recognized as a mismatch when aligning reads to the genome. Hisat3n accounts for that and does not penalize when detecting a U>C mismatch on the reads.
-
+The SLAM-seq pipeline includes Quality Control, rRNA filtering using Bowtie2, Bowtie and STAR prior to Hisat3N alignment for accounting U>C substitutions. The converted and uncorverted reads are generated with a custom Java code, and then gene and isoform expression levels are estimated by RSEM or Kallisto. 
 
 ##### Steps:
   1. For Quality Control, we use FastQC to create qc outputs. There are optional read quality filtering (trimmomatic), read quality trimming (trimmomatic), adapter removal (cutadapt) processes available.
