@@ -1,6 +1,6 @@
 # You can use this file to create a conda environment for this pipeline:
 #   conda env create -f environment.yml
-name: dolphinnext-slamseq-3.0
+name: dolphinnext-slamseq-1.0
 channels:
   - conda-forge
   - bioconda
